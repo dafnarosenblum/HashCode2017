@@ -15,6 +15,10 @@ public class EndPoint {
 		this.dataCenterLatency = dataCenterLatency;
 	}
 
+	public int getId() {
+		return id;
+	}
+
 	public Map<CacheServer, Long> getChacheServersToLatencies() {
 		return cacheServersToLatencies;
 	}
