@@ -2,16 +2,16 @@ package Entities;
 
 public class Requests {
 
-	private final int videoId;
+	private final Video video;
 	private final int numberOfRequests;
 
-	public Requests(int videoId, int numberOfRequests) {
-		this.videoId = videoId;
+	public Requests(Video video, int numberOfRequests) {
+		this.video = video;
 		this.numberOfRequests = numberOfRequests;
 	}
 
-	public int getVideoId() {
-		return videoId;
+	public Video getVideo() {
+		return video;
 	}
 
 	public int getNumberOfRequests() {
