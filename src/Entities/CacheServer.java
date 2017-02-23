@@ -24,6 +24,10 @@ public class CacheServer {
 	public List<Video> getSavedVideos() {
 		return savedVideos;
 	}
+	
+	public void setSavedVideos(List<Video> videos) {
+        this.savedVideos = videos;
+    }
 
 	public int getTotalUsedSpace() {
 		return savedVideos.stream().mapToInt(o -> o.getSizeMB()).sum();
