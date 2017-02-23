@@ -1,19 +1,18 @@
 package Entities;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class EndPoint {
 
 	private final int id;
 	private final long dataCenterLatency;
-	private final Map<CacheServer, Long> cacheServersToLatencies;
-	private final Requests requests;
+	private final Map<CacheServer, Long> cacheServersToLatencies = new HashMap<>();
+	private Requests requests;
 
-	public EndPoint(int id, long dataCenterLatency, Map<CacheServer, Long> cacheServersToLatencies, Requests request) {
+	public EndPoint(int id, long dataCenterLatency) {
 		this.id = id;
 		this.dataCenterLatency = dataCenterLatency;
-		this.cacheServersToLatencies = cacheServersToLatencies;
-		this.requests = request;
 	}
 
 	public Map<CacheServer, Long> getChacheServersToLatencies() {
@@ -22,5 +21,13 @@ public class EndPoint {
 
 	public Requests getRequest() {
 		return requests;
+	}
+
+	public void addCacheToLatency(CacheServer cache, Long latency) {
+		cacheServersToLatencies.put(cache, latency);
+	}
+
+	public void setRequests(Requests requests) {
+		this.requests = requests;
 	}
 }
