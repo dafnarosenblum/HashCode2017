@@ -1,5 +1,6 @@
 package Main;
 
+import java.util.Collection;
 import java.util.List;
 
 import Entities.CacheServer;
@@ -14,7 +15,7 @@ public class VideoAllocator {
             if (v.getSizeMB() > cacheServer.getSizeMB()) {
                 relevantVideos.remove(v);
             }
-            if (false) { // v.getRequests() == 0
+            if (v.totalRequestsSum().equals(0l)) {
                 relevantVideos.remove(v);
             }
         }

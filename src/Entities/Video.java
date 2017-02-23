@@ -7,6 +7,7 @@ public class Video {
 	private final int id;
 	private final int sizeMB;
 	private List<Long> timeSavedPerCacheServer;
+	private List<Long> requests; 
 
 	public Video(int id, int sizeMB) {
 		this.id = id;
@@ -27,6 +28,18 @@ public class Video {
 	
 	public void addTimeSavedPerCacheServer(Long timeSaved) {
 	    timeSavedPerCacheServer.add(timeSaved);
+	}
+	
+	public List<Long> getRequests() {
+	    return requests;
+	}
+	
+	public Long totalRequestsSum() {
+	    Long totalRequests = 0L;
+	    for (Long l : requests) {
+	        totalRequests += l;
+	    }
+	    return totalRequests;
 	}
 
 }
