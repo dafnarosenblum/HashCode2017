@@ -13,6 +13,10 @@ public class CacheServer {
 		this.sizeMB = sizeMB;
 	}
 
+	public int getId() {
+        return id;
+    }
+	
 	public long getSizeMB() {
 		return sizeMB;
 	}

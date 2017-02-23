@@ -6,7 +6,7 @@ public class Video {
 
 	private final int id;
 	private final int sizeMB;
-	private List<Long> timeSavedPerCacheServer;
+	private List<Double> timeSavedPerCacheServer;
 	private List<Long> requests; 
 
 	public Video(int id, int sizeMB) {
@@ -22,11 +22,11 @@ public class Video {
 		return sizeMB;
 	}
 	
-	public List<Long> getTimeSavedPerCacheServer() {
+	public List<Double> getTimeSavedPerCacheServer() {
 	    return timeSavedPerCacheServer;
 	}
 	
-	public void addTimeSavedPerCacheServer(Long timeSaved) {
+	public void addTimeSavedPerCacheServer(Double timeSaved) {
 	    timeSavedPerCacheServer.add(timeSaved);
 	}
 	
